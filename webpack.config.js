@@ -32,13 +32,15 @@ module.exports = [
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: path.resolve(SourceDirectory, "index.html"),
-        hot: true,
-        open: true,
-        historyApiFallback: {
-          rewrites: [{ from: /./, to: "/" }]
-        }
+        template: path.resolve(SourceDirectory, "index.html")
       })
-    ]
+    ],
+    devServer: {
+      hot: true,
+      open: true,
+      historyApiFallback: {
+        rewrites: [{ from: /./, to: "/" }]
+      }
+    }
   }
 ];
