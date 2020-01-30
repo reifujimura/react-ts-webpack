@@ -10,6 +10,7 @@ module.exports = [
     entry: path.resolve(SourceDirectory, "index.tsx"),
     output: {
       path: DistDirectory,
+      publicPath: "/",
       filename: "bundle.[hash].js"
     },
     module: {
