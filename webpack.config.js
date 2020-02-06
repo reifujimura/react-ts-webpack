@@ -39,9 +39,7 @@ module.exports = [
     devServer: {
       hot: true,
       open: true,
-      historyApiFallback: {
-        rewrites: [{ from: /./, to: "/" }]
-      }
+      historyApiFallback: true
     }
   }
 ];
